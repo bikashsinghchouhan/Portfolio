@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Roadmap</title>
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <style>
+        /* General Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #141e30, #243b55);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        #education {
+            text-align: center;
+            font-size: 32px;
+            margin-top: 20px;
+        }
+
+        /* Timeline Container */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 50px auto;
+        }
+
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 4px;
+            background-color: rgba(255, 255, 255, 0.3);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -2px;
+        }
+
+        /* Timeline Item */
+        .timeline-item {
+            padding: 20px;
+            position: relative;
+            width: 50%;
+            opacity: 1; /* Ensure visibility */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .left {
+            left: 0;
+            text-align: left;
+        }
+
+        .right {
+            left: 50%;
+            text-align: left;
+        }
+
+        /* Dots for Points */
+        .timeline-item::after {
+            content: '\f19d';
+            font-family: "Font Awesome 5 Free";
+            font-weight: 900;
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            border: 3px solid #fff;
+            top: 20px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 35px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .right::after {
+            left: -20px;
+        }
+
+        .left::after {
+            right: 18px;
+        }
+
+        /* Glassmorphic Content Box */
+        .content {
+            padding: 20px ;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            display: inline-block;
+            width: 80%;
+        }
+
+        .content:hover {
+            transform: scale(1.05);
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 600px) {
+            .timeline::after {
+                left: 20px;
+            }
+
+            .timeline-item {
+                width: 100%;
+                padding-left: 40px;
+                text-align: left;
+            }
+
+            .timeline-item::after {
+                left: 10px;
+            }
+
+            .right {
+                left: 0%;
+            }
+        }
+        @media(max-width:425px){
+
+
+        }
+    </style>
+</head>
+<body>
+
+    <h2 #education>🎓 My Education Roadmap</h2>
+
+    <div class="timeline">
+
+        <!-- 10th Details -->
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>10th Grade</h3>
+                <p><strong>School:</strong> Rajkiyekrit+2 High School
+                <li>Jharkhand State Board</li></p>
+                <p><strong>Year of Passing:</strong> 2018</p>
+                <p><strong>Percentage:</strong> 85.6% 
+                <li>With( 100/100 in Mathematics )</li></p>
+            </div>
+        </div>
+
+        <!-- 12th Details -->
+        <div class="timeline-item right">
+            <div class="content">
+                <h3>12th Grade</h3>
+                <p><strong>College:</strong> Vidya Vikas Public School, Ranchi</p>
+                <p><strong>Year of Passing:</strong> 2020</p>
+                <p><strong>Percentage:</strong> 85.6%</p>
+            </div>
+        </div>
+
+        <!-- BE Details -->
+        <div class="timeline-item left">
+            <div class="content">
+                <h3>Bachelor of Engineering (B.E)</h3>
+                <p><strong>College:</strong> M. S. Engineering College , Bangalore</p>
+                <p><strong>Year of Passing:</strong> 2025</p>
+                <p><strong>CGPA:</strong> 7.8 </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- GSAP Animation -->
+    <script>
+        gsap.from(".timeline-item", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.5,
+            ease: "power2.out"
+        });
+
+        gsap.from(".content", {
+            scale: 0.8,
+            opacity: 0,
+            duration: 1.5,
+            stagger: 0.5,
+            ease: "elastic.out(1, 0.5)"
+        });
+    </script>
+
+</body>
+</html>

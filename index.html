@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A responsive navigation bar with a sidebar menu for mobile devices.">
+    <meta name="keywords" content="Responsive Navbar, Navigation Bar, HTML, CSS, SEO Friendly">
+    <meta name="author" content="Bikash Kumar singh">
+    <title>Responsive Navbar</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="Portcss.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+
+    <style>
+        /* here is only navbar and their responsiveness css*/
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background: rgb(5 5 52);
+            padding: 15px;
+            color: white;
+        }
+
+        .logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgb(70, 69, 85);
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            transform: translateY(5px);
+        }
+
+        .nav-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .nav-links {
+            display: flex;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .nav-links a:hover {
+            background: #575757;
+        }
+
+        .hamburger {
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+        }
+
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: -250px;
+            width: 250px;
+            height: 100%;
+            background: rgb(5 5 52);
+            padding-top: 20px;
+            transition: left 0.3s ease-in-out;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background: #575757;
+        }
+
+        .close-btn {
+            font-size: 24px;
+            cursor: pointer;
+            color: white;
+            padding: 10px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navbar">
+        <button class="hamburger" onclick="toggleNav()" aria-label="Open Navigation Menu">&#9776;</button>
+        <div class="logo"><img src="Bikash2.1.jpg" alt="loading.."></div>
+        <div class="nav-container">
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#Education">Education</a>
+                <a href="#Project">Project</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <aside class="sidebar" id="mySidebar">
+        <button class="close-btn" onclick="toggleNav()" aria-label="Close Navigation Menu">&times;</button>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#Education">Education</a>
+        <a href="#Project">Project</a>
+        <a href="#contact">Contact</a>
+    </aside>
+
+
+    <main>
+        <section class="firstSection" id="Home">
+            <div class="leftSection">
+
+                <p> Hi, I am <span class="purple">Bikash Singh</span></p>
+                <div class="div1">
+                    <p>and i'm a Passionate </p>
+                </div>
+                <span id="element"></span>
+
+
+                <div class="Resume">
+                    <a href="https://drive.google.com/file/d/1H4Zg_ejILszRZrapk3JTtslagX77uWjW/view?usp=drivesdk "
+                        class="pdf-button" target="_blank" download>
+                        Resume
+                    </a>
+
+                </div>
+                <!-- <button><a href="Bikash__Copy_.pdf" class="pdf-button" target="_blank" download>Resume</a></button>    -->
+
+            </div>
+            <div class="rightSection"><img src="img2.png"> </div>
+            </div>
+        </section>
+
+        <hr>
+
+
+        <section class="secondSection" id="about">
+            <h1>About</h1>
+            <div class="about" id="about">
+                <div class="about-containt">
+                    <h3>i'm <b>Bikash Kumar Singh</b>, a recent graduate with a B.E Degree in CSE from Visvesvaraya
+                        Technological University(VTU), Belgavi Bangalore.</h3>
+                    <h3> i'm Looking for a challenging role in a reputable organization to utilize my technical,
+                        Database and management skills</h3>
+                    <h3>for the growth of the organization as well as to enhance my knowledge about new and emerging
+                        trends in the IT sector.</h3>
+
+                </div>
+                <div class="my-skills">
+
+                    <p>Skills</p>
+                    <div>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>C</li>
+                        <li> HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Reack.js</li>
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+        <section class="thirdSection" id="Education">
+
+            <h2 #education>🎓 My Education Roadmap</h2>
+
+            <div class="timeline">
+
+                <!-- 10th Details -->
+                <div class="timeline-item left">
+                    <div class="content-timeline">
+                        <h3>10th Grade</h3>
+                        <p><strong>School:</strong> Rajkiyekrit+2 High School
+                            <li>Jharkhand State Board</li>
+                        </p>
+                        <p><strong>Year of Passing:</strong> 2018</p>
+                        <p><strong>Percentage:</strong> 85.6%
+                            <li>With( 100/100 in Mathematics )</li>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- 12th Details -->
+                <div class="timeline-item right2">
+                    <div class="content-timeline">
+                        <h3>12th Grade</h3>
+                        <p><strong>College:</strong> Vidya Vikas Public School, Ranchi</p>
+                        <p><strong>Year of Passing:</strong> 2020</p>
+                        <p><strong>Percentage:</strong> 80.6%</p>
+                    </div>
+                </div>
+
+                <!-- BE Details -->
+                <div class="timeline-item left">
+                    <div class="content-timeline">
+                        <h3>Bachelor of Engineering (B.E)</h3>
+                        <p><strong>College:</strong> M. S. Engineering College , Bangalore</p>
+                        <p><strong>Year of Passing:</strong> 2025</p>
+                        <p><strong>CGPA:</strong> 7.8 </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <section class="forthSection" id="Project">
+            <h1>Project</h1>
+
+            <div class="project-container">
+                <div class="project-box">
+                    <h1>Project 1</h1>
+                    <div>
+                        <h3>IoT Device for detecting Disease in plant</h3>
+                    </div>
+                    <div>
+
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h1>Project 2</h1>
+                    <div>
+                        <h3>Medical Store Management System </h3>
+                    </div>
+                </div>
+
+                <div class="project-box">
+                    <h1>Project 3</h1>
+                    <div>
+                        <h3><a href="Calculator.html">Simple Calculator</a> </h3>
+                    </div>
+                </div>
+                <div class="project-box">
+                    <h1>Project 4</h1>
+                </div>
+                <!-- 
+                <div class="project-box">
+                    <h1>Project 5</h1>
+                </div>
+                <div class="project-box">
+                    <h1>Project 6</h1>
+                </div>
+                <div class="project-box">
+                    <h1>Project 7</h1>
+                </div>
+                <div class="project-box">
+                    <h1>Project 7</h1>
+                </div>
+              -->
+            </div>
+
+
+
+
+
+
+
+        </section>
+
+        <section class="fifthSection" id="Contact-us">
+            <h1></h1>
+
+
+
+
+
+
+
+        </section>
+
+
+
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <p>Connect with me:</p>
+            <div class="social-icons">
+                <a href="https://www.instagram.com/bikash_singh__01" target="_blank"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://github.com/bikashsinghchouha" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/bikashkrsin16815b29b" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/+919304870789" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                <a href="mailto:bikashkrsin@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+            <p>&copy; 2025 Bikash Kumar Singh. All Rights Reserved.</p>
+        </footer>
+
+        <!-- FontAwesome for Icons -->
+        <script src="https://kit.fontawesome.com/your-kit-code.js" crossorigin="anonymous"></script>
+
+    </main>
+
+
+    <button id="scrollBtn" onclick="scrollToTop()">▲ Top</button>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- script for respnsive navbar or sidebar-->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            let hamburger = document.querySelector(".hamburger");
+            let right = document.querySelector(".right");
+
+            hamburger.addEventListener("click", () => {
+                right.classList.toggle("active");
+            });
+        });
+
+
+
+
+
+
+
+    </script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer', 'Content Creator', 'Software Developer', '   '],
+            typeSpeed: 100,
+            backSpeed: 50,
+            loop: true // Makes it run infinitely
+
+        });
+    </script>
+
+    <!-- GSAP Animation of education section-->
+    <script>
+        gsap.from(".timeline-item", {
+            opacity: 0,
+            y: 50,
+            duration: 1,
+            stagger: 0.5,
+            ease: "power2.out"
+        });
+
+        gsap.from(".content-timeline", {
+            scale: 0.8,
+            opacity: 0,
+            duration: 1.5,
+            stagger: 0.5,
+            ease: "elastic.out(1, 0.5)"
+        });
+
+    </script>
+    <!----------------Scroll bar---------------------->
+    <script>
+        const scrollBtn = document.getElementById("scrollBtn");
+
+        // Show the button when scrolled down
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop > 200) {
+                scrollBtn.style.display = "block";
+            } else {
+                scrollBtn.style.display = "none";
+            }
+        };
+
+        // Smooth scroll to the top
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+        }
+    </script>
+
+
+
+
+
+
+    <script>
+        function toggleNav() {
+            const sidebar = document.getElementById("mySidebar");
+            sidebar.style.left = sidebar.style.left === "0px" ? "-250px" : "0px";
+        }
+    </script>
+</body>
+
+</html>
