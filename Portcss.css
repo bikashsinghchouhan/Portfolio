@@ -521,6 +521,7 @@ ul.inline-list li {
     margin: 30px;
 
     font-family: 'Times New Roman', Times, serif;
+    transform: translateX(-15px);
 }
 
 .about li {
@@ -536,7 +537,7 @@ ul.inline-list li {
 }
 
 .my-skills {
-    width: 90%;
+
     justify-content: space-around;
     display: flex;
     flex-direction: column;
@@ -544,6 +545,7 @@ ul.inline-list li {
     border: 2px solid white;
    padding:10px;
     margin: 10px;
+    
 }
 
 .my-skills div {
