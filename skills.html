@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mySkills</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: arial, sans-serif;
+    }
+
+    .mySkills {
+        margin: 30px;
+
+
+    }
+
+    .skills-section {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        padding: 10px;
+
+
+    }
+
+    .skill-card {
+        background-color: rgb(79, 77, 77);
+        border: 2px solid rgb(68, 66, 53);
+        padding: 10px;
+        border-radius: 10px;
+        transition: 0.3s ease, box-shadow 0.3s ease;
+        text-align: center;
+        color: white
+    }
+
+    .skills-section :hover {
+
+        transform: translateY(-5px);
+        box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.6);
+    }
+
+    .skill-card img {
+        border-radius: 10px;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+
+    }
+
+
+
+
+
+    .progressive-bar {
+        background: #333;
+        border-radius: 10px;
+        height: 15px;
+        margin-top: 10px;
+        overflow: hidden;
+
+    }
+
+    .progress {
+        height: 100%;
+        background: orange;
+
+
+    }
+
+
+
+
+
+    /* Responsive Design */
+    @media (max-width: 992px) {
+        .skills-section {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 600px) {
+        .skills-section {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+</style>
+
+<body>
+    <div class="mySkills">
+        <div class="skills-section">
+            <div class="skill-card">
+                <img src="java.jpeg">
+
+                <h3>Java</h3>
+                <div class="progressive-bar">
+                    <div class="progress" style="width: 40%;"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="html.jpeg">
+                <h3>HTML</h3>
+                <div class="progressive-bar">
+                    <div class="progress" style="width: 70%;"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="CSS.jpeg">
+                <h3>CSS</h3>
+                <div class="progressive-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="javaScript.jpeg">
+                <h3>javaScript</h3>
+                <div class="progressive-bar">
+                    <div class="progress" style="width: 20%;"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="python.jpg">
+                <h3>Python</h3>
+                <div class="progressive-bar">
+                    <div class="progress" style="width: 80%;"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="sql.jpeg">
+                <h3>SQL</h3>
+                <div class="progressive-bar">
+                    <div class="progress" style="width: 60%;"></div>
+                </div>
+            </div>
+            <div class="skill-card">
+                <img src="C.jpg">
+                <h3>CPP</h3>
+                <div class="progressive-bar">
+                    <div class="progress" style="width: 90%;"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
