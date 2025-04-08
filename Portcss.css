@@ -517,16 +517,12 @@ ul.inline-list li {
 
 .about {
     width: 100%;
-
-    margin: 30px;
-
+    margin: 10px;
+z-index:-1;
     font-family: 'Times New Roman', Times, serif;
     transform: translateX(-15px);
 }
 
-.about li {
-    margin: 2px 0 2px 0;
-}
 
 
 
