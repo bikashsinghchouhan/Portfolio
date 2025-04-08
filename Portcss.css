@@ -188,7 +188,7 @@ main hr {
     cursor: pointer;
     display: none; /* Initially hidden */
     transition: 0.3s;
-    z-index: -1;}
+    z-index: ;}
 
 #scrollBtn:hover {
     background: #0056b3;
