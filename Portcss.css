@@ -530,11 +530,7 @@ ul.inline-list li {
 
 
 
-.about-containt h3 {
-    align-items: left;
-    justify-content: left;
-    margin-bottom: 10px;
-}
+
 
 .my-skills {
 
@@ -575,6 +571,92 @@ ul.inline-list li {
 .my-skills p {
     margin-bottom: 20px;
 }
+
+
+
+
+
+.mySkills {
+    margin: 30px;
+
+
+}
+
+.skills-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 10px;
+
+
+}
+
+.skill-card {
+    background-color: rgb(79, 77, 77);
+    border: 2px solid rgb(68, 66, 53);
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: white
+}
+
+.skills-section :hover {
+
+    transform: translateY(-5px);
+    box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.6);
+}
+
+.skill-card img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+
+}
+
+
+
+
+
+.progressive-bar {
+    background: #333;
+    border-radius: 10px;
+    height: 15px;
+    margin-top: 10px;
+    overflow: hidden;
+
+}
+
+.progress {
+    height: 100%;
+    background: orange;
+
+
+}
+
+
+
+
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .skills-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .skills-section {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+
+
+
+
 
 
 /*--------------------------------------------*/
